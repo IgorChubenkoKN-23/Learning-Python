@@ -1,10 +1,10 @@
 dormitory = { 
-        "Shevchenko": "402",
-        "Ivanov":"105",
-        "Bondar":"310"
+        "shevchenko": "402",
+        "ivanov":"105",
+        "bondar":"310"
         }
 
-people = input("Введіть своє прізвище: ")
+people = input("Введіть своє прізвище: ").strip().lower()
 
 if people in dormitory:
     print("Проходьте ваша кімната",dormitory[people])
