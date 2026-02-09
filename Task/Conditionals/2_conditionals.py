@@ -1,18 +1,14 @@
 tariffs = {
-    "польща": 300,
-    "німеччина": 450,
-    "сша": 700
+    "польща": [344,455],
+    "німеччина": [450, 110],
+    "сша": [700,800]
 }
 
-country=input("Введіть країну доставки:").strip().lower()
+country=input("Введіть країну доставки:")
 mass=input("Введіть вагу посилки: ")
-    
-if country == "Україна":
-    if int(mass) <= 5 :
-        print("Ціна 50 грн")
-    elif int(mass)> 5 :
-        print("Ціна 100 грн")
-elif country in tariffs:
-    print(f"Ціна {tariffs[country]} грн")
-else:
-    print("Доставка в цю країну недоступна")
+
+
+if int(mass) <= 5 :
+    print(tariffs[country][0])
+elif int(mass)> 5 :
+    print(tariffs[country][1])
